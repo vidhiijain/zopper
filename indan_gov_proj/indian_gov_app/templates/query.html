@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+    <h2 style="text-align: center">Query Indain Gov DB</h2>
+    <form action="" method="get" style="text-align:center">
+        {{ data.form.as_p }}
+        <input type="submit" value="Search" style="font-weight: bold"/>
+    </form>
+
+    <br><br><br><br>
+    <h2 style="text-align: center">Search Results</h2>
+    <table border="1" bgcolor="#FAAC58" style="width:100%;text-align:center">
+        <tr>
+            <td><h3>Device Name</h3></td>
+            <td><h3>Magnification</h3></td>
+            <td><h3>Field of View</h3></td>
+            <td><h3>Range</h3></td>
+        </tr>
+        {% for obj in data %}
+        <tr>
+            <td>{{ obj.device_name }}</td>
+            <td>{{ obj.magnification }}</td>
+            <td>{{ obj.field_of_view }}</td>
+            <td>{{ obj.range }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
