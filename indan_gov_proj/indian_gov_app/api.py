@@ -15,5 +15,5 @@ class EntryResourceGovLog(ModelResource):
         queryset = DataStore.objects.all()
         resource_name = 'entry'
         authorization = Authorization()
-        filtering = {"device_name": ALL, "magnification": ALL, "field_of_view": ALL, "range": ['exact', 'gt', 'lt', 'lte', 'gte']}
+        filtering = {"device_name": ALL, "magnification": ALL, "field_of_view": ALL, "range": ALL}
 	cache = SimpleCache(timeout=10)

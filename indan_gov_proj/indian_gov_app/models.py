@@ -15,7 +15,7 @@ class DataStore(models.Model):
     device_name = models.SlugField(max_length=255, unique=True)
     magnification = models.CharField(max_length=15, blank=True, null=True)
     field_of_view = models.CharField(max_length=15, blank=True, null=True)
-    range = models.CharField(max_length=15, blank=True, null=True)
+    range = models.IntegerField(blank=True, null=True, default=0)
 
     def __str__(self):
         return self.device_name

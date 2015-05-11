@@ -9,5 +9,5 @@ class DSFilterForm(django_filters.FilterSet):
         fields = {'device_name' : ['icontains'],
                   'magnification': ['icontains'],
                   'field_of_view':['icontains'],
-                  'range': ['icontains']
+                  'range': ['gt', 'lt', 'exact']
         }

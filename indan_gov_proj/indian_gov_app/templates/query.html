@@ -3,6 +3,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Search</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function()
+	{
+        	$("label[for=id_range__gt]").text('Range for greater than');
+	        $("label[for=id_range__lt]").text('Range for less than');
+	        $("label[for=id_range]").text('Range');
+    	});
+	</script>
 </head>
 <body>
     <h2 style="text-align: center">Query Indain Gov DB</h2>
