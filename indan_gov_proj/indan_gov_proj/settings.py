@@ -58,6 +58,18 @@ MIDDLEWARE_CLASSES = (
 
 )
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'TIMEOUT': 60
+    },
+    'resources': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'TIMEOUT': 60
+    }
+}
+
+
 ROOT_URLCONF = 'indan_gov_proj.urls'
 
 TEMPLATES = [
